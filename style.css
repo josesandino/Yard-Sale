@@ -14,6 +14,61 @@ body {
    font-family: 'Quicksand', sans-serif;
    margin: 0;
 }
+ /* HOME */
+ .cards-container {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fill, 240px);
+    place-content: center;
+ }
+.product-card {
+   width: 240px;
+}
+.product-card img {
+   width: 240px;
+   height: 240px;
+   border-radius: 20px;
+   object-fit: cover;
+}
+.product-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-block-start: 12px;
+}
+.product-info div p:nth-child(1){
+   font-weight: bold;
+   font-size: var(--md);
+   margin-block-start: 0;
+   margin-block-end: 4px;
+}
+.product-info div p:nth-child(2){
+   font-size: var(--sm);
+   margin-block: 0;
+   color: var(--very-light-pink);
+}
+.product-card figure img {
+   width: 36px;
+   height: 36px;
+}
+.product-card figure {
+   margin: 0;
+}
+
+@media (max-width: 640px){
+   .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+   }
+   .product-card{
+      width: 140px;
+   }
+   .product-card img {
+      width: 140px;
+      height: 140px;
+   }
+}
+
+/* LOGIN */
 
 .login {
    width: 100%;
