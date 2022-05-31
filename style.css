@@ -68,6 +68,41 @@ body {
    }
 }
 
+/* DESKTOP MENU*/
+.desktop-menu{
+   width: 110px;
+   height: auto;
+   border: 1px solid var(--very-light-pink);
+   border-radius: 6px;
+   padding: 20px 20px 0 20px;
+}
+.desktop-menu ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.desktop-menu ul li{
+   text-align: end;
+   margin-block-end: 20px;
+}
+.desktop-menu ul li:nth-child(1),
+.desktop-menu ul li:nth-child(2){
+   font-weight: bold;
+}
+.desktop-menu ul li:last-child{
+   padding-block-start: 20px;
+   border-block-start: 1px solid var(--very-light-pink);
+}
+.desktop-menu ul li a{
+   color: var(--black);
+   text-decoration: none;
+}
+
+.desktop-menu ul li:last-child a{
+   color: var(--hospital-green);
+   font-size: var(--sm);
+}
+
 /* LOGIN */
 
 .login {
