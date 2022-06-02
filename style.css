@@ -67,7 +67,83 @@ body {
       height: 140px;
    }
 }
-
+/* NAVBAR */
+.navbar {
+   display: flex;
+   /* width: 100%; */
+   height: 60px;
+   justify-content: space-between;
+   padding-inline: 24px;
+   align-items: center;
+   border-block-end: 1px solid var(--very-light-pink);
+}
+.menu {
+   display: none;
+}
+.logo-navbar{
+   width: 100px;
+}
+.navbar-left{
+   display: flex;
+}
+.navbar-left ul {
+   margin-inline-start: 12px;
+}
+.navbar-left ul,
+.navbar-right ul{
+   list-style: none;
+   padding: 0;
+   margin:0;
+   display: flex;
+   align-items: center;
+}
+.navbar-left ul  {
+   margin-inline-start: 12px;
+}
+.navbar-left ul li a,
+.navbar-right ul li a{
+   text-decoration: none;
+   color: var(--very-light-pink);
+   border: 1px solid var(--white);
+   padding: 8px;
+   border-radius: 8px;
+}
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{
+   border: 1px solid var(--hospital-green);
+   color: var(--hospital-green);
+}
+.navbar-email{
+   color: var(--very-light-pink);
+   font-size: var(--sm);
+   margin-inline-end: 12px;
+}
+.navbar-shopping-cart{
+   position: relative;
+}
+.navbar-shopping-cart div {
+   width: 16px;
+   height: 16px;
+   background-color: var(--hospital-green);
+   border-radius: 50%;
+   font-size: var(--sm);
+   font-weight: bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   inset-block-start: -6px;
+   inset-inline-end: -6px;
+}
+@media (max-width: 640px){
+   .menu {
+      display: block;
+   }
+   .navbar-left ul,
+   .navbar-email {
+      display: none;
+   }
+}
 /* DESKTOP MENU*/
 .desktop-menu{
    width: 110px;
@@ -166,19 +242,23 @@ a.sign-out{
    border-radius: 8px;
    padding-inline: 24px;
 }
-.order p:nth-child(1) {
+.order p:nth-child(1), 
+.orders p:nth-child(1) {
    display: flex;
    flex-direction: column;
 }
-.order p span:nth-child(1){
+.order p span:nth-child(1),
+.orders p span:nth-child(1){
    font-size: var(--md);
    font-weight: bold;
 }
-.order p span:nth-child(2){
+.order p span:nth-child(2),
+.orders p span:nth-child(2){
    font-size: var(--sm);
    color: var(--very-light-pink)
 }
-.order p:nth-child(2) {
+.order p:nth-child(2),
+.orders p:nth-child(2) {
    text-align: end;
    font-weight: bold;
 }
@@ -205,6 +285,17 @@ a.sign-out{
    font-size: var(--md);
    font-weight: bold;
 }
+/*MY ORDERS*/
+.orders {
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   gap: 16px;
+   align-items: center;
+   margin-block-end: 12px;
+   border-radius: 8px;
+}
+
+
 /* LOGIN */
 
 .login {
